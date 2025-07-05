@@ -190,6 +190,8 @@ public class LinkedListEx {
     }
 
     // Reverse LinkedList
+
+    //Case 1 : Iterative Reverse
     public void reverse() {
         Node prev = null;
         Node curr = head;
@@ -203,6 +205,27 @@ public class LinkedListEx {
         }
         head = prev;
     }
+
+    //Case 2 : Recursive Reverse
+    public void reverse2(){
+        head = reverseRecursive(head);
+    }
+    public Node reverseRecursive(Node head) {
+        // Base case: empty list or single node
+        if (head == null || head.next == null)
+            return head;
+
+        // Reverse the rest of the list
+        Node newHead = reverseRecursive(head.next);
+
+        // Adjust the pointers
+        head.next.next = head;
+        head.next = null;
+
+        return newHead;
+    }
+
+
 
     // Delete Nth from end : First elemnt is assumed to be the tail
     public void deleteNthFromEnd(int idx) {
@@ -246,9 +269,10 @@ public class LinkedListEx {
         Node right = prev;
         Node left = head;
 
-        //check if equal
-        while(right!=null){
-            if(left.data != right.data) return false ;
+        // check if equal
+        while (right != null) {
+            if (left.data != right.data)
+                return false;
             left = left.next;
             right = right.next;
         }
