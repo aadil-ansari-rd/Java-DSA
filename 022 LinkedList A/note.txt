@@ -1,0 +1,28 @@
+Node temp= head;
+
+-----------------------------------------------------------------
+//Case : 1
+//Loop stop when complete linkedlist is taversed :-
+//temp = null
+
+while(temp!=null){
+    temp= temp.next
+}
+
+-----------------------------------------------------------------
+//Case : 2
+//Loop stop at last Node  :-
+//temp = reference of last node of the linked list
+
+while(temp.next!=null){
+    temp= temp.next;
+}
+
+-----------------------------------------------------------------
+//Case : 2
+//Loop stop at second last Node (for linkedlist size ≥ 3) :- 
+//temp = reference of second last node of the linked list
+
+while(temp.next.next!=null){
+    temp= temp.next;
+}
