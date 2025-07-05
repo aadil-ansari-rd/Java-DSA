@@ -230,6 +230,7 @@ public class LinkedListEx {
 
     //Case 2 : Recursive Reverse
     public void reverse2(){
+        tail = head; // old head becomes new tail
         head = reverseRecursive(head);
     }
     public Node reverseRecursive(Node head) {
