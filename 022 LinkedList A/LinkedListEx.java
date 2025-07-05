@@ -8,9 +8,15 @@ class Node {
     }
 }
 
+
+//----------------------------------------------------------------------------------------------------
+
+
 public class LinkedListEx {
 
     public static Node head, tail;
+
+    //------------------------------------------------------------------------------------------------
 
     // Size of LinkedList
     public int getSize() {
@@ -22,6 +28,8 @@ public class LinkedListEx {
         }
         return count;
     }
+
+    //------------------------------------------------------------------------------------------------
 
     // Print LinkedList
     public void printList() {
@@ -36,6 +44,8 @@ public class LinkedListEx {
         }
         System.out.println("null");
     }
+
+    //------------------------------------------------------------------------------------------------
 
     // Add element to the start of the LinkedList.
     public void addStart(int data) {
@@ -52,6 +62,8 @@ public class LinkedListEx {
         head = newNode;
     }
 
+    //------------------------------------------------------------------------------------------------
+
     // Add element to the end of the LinkedList
     public void addLast(int data) {
         if (head == null) {
@@ -62,6 +74,8 @@ public class LinkedListEx {
         tail.next = newNode;
         tail = newNode;
     }
+
+    //------------------------------------------------------------------------------------------------
 
     // Add element to the index
     public void addAtIndex(int data, int index) {
@@ -83,6 +97,8 @@ public class LinkedListEx {
             tail = newNode;
         }
     }
+
+    //------------------------------------------------------------------------------------------------
 
     // Remove element from start
 
@@ -112,6 +128,8 @@ public class LinkedListEx {
     // return val ;
 
     // }
+
+    //------------------------------------------------------------------------------------------------
 
     // Remove element from end
 
@@ -154,6 +172,8 @@ public class LinkedListEx {
     // return val;
     // }
 
+    //------------------------------------------------------------------------------------------------
+
     // Search in LinkedList
 
     // Case 1 : Iterative Search
@@ -188,6 +208,8 @@ public class LinkedListEx {
         }
         return idx + 1;
     }
+
+    //------------------------------------------------------------------------------------------------
 
     // Reverse LinkedList
 
@@ -225,7 +247,7 @@ public class LinkedListEx {
         return newHead;
     }
 
-
+    //------------------------------------------------------------------------------------------------
 
     // Delete Nth from end : First elemnt is assumed to be the tail
     public void deleteNthFromEnd(int idx) {
@@ -248,6 +270,8 @@ public class LinkedListEx {
         prev.next = prev.next.next;
         return;
     }
+
+    //------------------------------------------------------------------------------------------------
 
     // Check Paliindrome
     public boolean checkPallindrome() {
@@ -288,6 +312,8 @@ public class LinkedListEx {
         }
         return slow;
     }
+
+    //------------------------------------------------------------------------------------------------
 
     public static void main(String[] args) {
         LinkedListEx li = new LinkedListEx();
